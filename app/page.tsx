@@ -126,7 +126,7 @@ export default function Home() {
 
 <div className="mt-12 flex flex-wrap gap-3 justify-center">
   <Link
-    href="/contact"
+    href="#contact"
     className="btn p-2 px-4 flex items-center gap-2 border border-gray-300 rounded-full text-gray-600 hover:bg-gray-100 dark:text-gray-300"
   >
     <Mail size={16} />
