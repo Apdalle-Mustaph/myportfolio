@@ -34,6 +34,4 @@ Thumbs.db
 *.log
 *.tsbuildinfo
 
-# Tailwind output (if used)
-tailwind.config.js
-postcss.config.js
+
