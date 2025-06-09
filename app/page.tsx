@@ -134,7 +134,7 @@ export default function Home() {
   </Link>
 
   <a
-    href="/images/CV CARTAN.doc"
+    href="/images/resume.doc"
     className="btn p-2 px-4 flex items-center gap-2 border border-gray-300 rounded-full text-gray-600 hover:bg-gray-100 dark:text-gray-300"
     download
   >
