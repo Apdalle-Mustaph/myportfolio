@@ -1,260 +1,263 @@
-// import React from 'react';
-// import Image from 'next/image';
-// import Link from 'next/link';
-
-// export default function Home() {
-//   return (
-//     <section className="py-16 space-y-12">
-//       <div className="flex flex-col items-center text-center">
-//         <Image src="/images/profile1.png" alt="Prof. Abdullahi" width={96} height={96} className="rounded-full" />
-//         <span className="mt-2 px-3 py-1 text-sm text-green-600 border border-green-600 rounded-full">Available to work</span>
-//         <h1 className="text-4xl font-bold mt-4">I'm Prof. Abdullahi </h1>
-//         <p className="text-lg mt-2 max-w-2xl text-gray-700">+20 years of experience. <span className="text-yellow-500 font-semibold">Accounting Consultant and Professor</span> in top Somali universities and ministries.</p>
-//         <div className="mt-4 flex gap-3">
-//           <Link href="/contact" className="btn">Contact Me</Link>
-//           <a href="/resume.pdf" className="btn btn-outline" download>Download CV</a>
-//         </div>
-//       </div>
-
-
-// <div id="experience" className="py-16">
-//   <h2 className="text-3xl font-bold mb-8 flex items-center gap-2">
-//     <span>💼</span> Work Experience
-//   </h2>
-
-//   <div className="border-l-2 border-yellow-400 pl-6 space-y-12">
-
-//     {/* Trainer & Consultant */}
-//     <div className="relative flex flex-col md:flex-row gap-6 ml-4">
-//       <div className="absolute left-[-0.8rem] top-2 w-4 h-4 bg-yellow-400 rounded-full border-2 border-white shadow ml-[-0.9rem]"></div>
-
-//       <div className="md:w-1/2">
-//         <h3 className="text-yellow-600 font-semibold ">Trainer & Consultant</h3>
-//         <p className="text-gray-500 dark:text-gray-400">Ministry of Energy and Water Resources</p>
-//         <p className="text-sm text-gray-500 dark:text-gray-400">2020</p>
-//       </div>
-//       <div className="md:w-1/2">
-//         <p className="text-gray-700 dark:text-gray-300">
-//           Delivered nationwide public sector training in finance and accounting practices. 
-//           Played a key role in capacity building for government staff in Somalia.
-//         </p>
-//       </div>
-//     </div>
-
-//     {/* Lecturer */}
-//     <div className="relative flex flex-col md:flex-row gap-6 ml-4">
-//       <div className="absolute left-[-0.8rem] top-2 w-4 h-4 bg-yellow-400 rounded-full border-2 border-white shadow ml-[-0.9rem]"></div>
-
-//       <div className="md:w-1/2">
-//         <h3 className="text-yellow-600 font-semibold">Lecturer</h3>
-//         <p className="text-gray-500 dark:text-gray-400">Horseed & Plasma University</p>
-//         <p className="text-sm text-gray-500 dark:text-gray-400">2014 – Present</p>
-//       </div>
-//       <div className="md:w-1/2">
-//         <p className="text-gray-700 dark:text-gray-300">
-//           Teaching undergraduate and postgraduate students in accounting, auditing, and project finance. 
-//           Mentoring future professionals and supporting academic excellence.
-//         </p>
-//       </div>
-//     </div>
-
-//   </div>
-// </div>
-
-
-//       <div id="projects">
-//         <h2 className="text-2xl font-semibold">Projects</h2>
-//         <div className="grid gap-6 mt-4 md:grid-cols-2">
-//           <div className="border p-4 rounded-md">
-//             <Image src="/images/training.jpg" alt="Project 1" width={500} height={300} className="rounded" />
-//             <h3 className="mt-2 font-semibold">Financial Audit Toolkit</h3>
-//             <p>Tool to streamline audit reporting using Excel and Power BI.</p>
-//           </div>
-//           <div className="border p-4 rounded-md">
-//             <Image src="/images/tool.jpg" alt="Project 2" width={500} height={300} className="rounded" />
-//             <h3 className="mt-2 font-semibold">Training Platform</h3>
-//             <p>Portal to train 500+ gov/NGO staff in Somalia.</p>
-//           </div>
-//         </div>
-//       </div>
-
-
-
-// <div id="about" className="py-16">
-//   <h2 className="text-3xl font-bold mb-4">About me</h2>
-
-//   <p className="mt-4 text-gray-700 dark:text-gray-300">
-//     My journey in accounting began in the <span className="text-yellow-600">early 2000s</span> when I developed a strong interest in financial systems, auditing, and transparency. With a background in <span className="text-yellow-600">Business Administration and Finance</span>, I quickly established myself as a trusted expert in <span className="text-yellow-600">financial management</span>, compliance, and institutional capacity development across Somalia.
-//   </p>
-
-//   <p className="mt-4 text-gray-700 dark:text-gray-300">
-//     Since <span className="text-yellow-600">2014</span>, I’ve had the privilege of lecturing at <span className="text-yellow-600">Horseed University</span> and <span className="text-yellow-600">Plasma University</span>, mentoring students in <span className="text-yellow-600">Accounting, Auditing, and Project Management</span>. I also led high-impact national training projects, including a successful engagement with the <span className="text-yellow-600">Ministry of Energy and Water Resources</span> in <span className="text-yellow-600">2020</span> to improve public financial accountability.
-//   </p>
-
-//   <p className="mt-4 text-gray-700 dark:text-gray-300">
-//     My career highlights include developing professional training manuals, conducting over <span className="text-yellow-600">200+ workshops</span>, and mentoring dozens of financial officers now thriving in government and NGO roles. I’m driven by a belief in <span className="text-yellow-600">empowerment through education</span> and a commitment to building <span className="text-yellow-600">strong, transparent financial systems</span> that support development.
-//   </p>
-// </div>
-
-
-//     </section>
-//   );
-// }
-
-
-
 'use client';
-import React from 'react';
+
+import React, { JSX, useState } from 'react';
+import { Menu, X } from 'lucide-react';
+import { TypeAnimation } from 'react-type-animation';
 import Image from 'next/image';
-import Link from 'next/link';
-import { Mail, Download, Send, MapPin, Phone } from 'lucide-react';
+import { motion } from 'framer-motion';
+
+
+
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+
+
+  const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
   return (
-    <section className="py-16 space-y-12 px-4">
-      <div className="flex flex-col items-center text-center">
-        <Image src="/images/profile1.png" alt="Prof. Abdullahi" width={96} height={96} className="rounded-full" />
-        <span className="mt-2 px-3 py-1 text-sm text-green-600 border border-green-600 rounded-full">Available to work</span>
-        <h1 className="text-4xl font-bold mt-4">I'm Prof. Abdullahi</h1>
-        <p className="text-lg mt-2 max-w-2xl text-gray-700 dark:text-gray-300">
-          +20 years of experience. <span className="text-yellow-500 font-semibold">Accounting Consultant and Professor</span> in top Somali universities and ministries.
-        </p>
-        {/* <div className="mt-4 flex flex-wrap gap-3 justify-center ">
-          <Link href="/contact" className="btn p-2 px-4   border-[1px] border-gray-300 rounded-full text-gray-600">Contact Me</Link>
-          <a href="/resume.pdf" className="btn  p-2 px-4 border-[1px] border-gray-300 rounded-full text-gray-600" download>Download CV</a>
-        </div> */}
+    <main className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white font-sans">
+      {/* Hero Section */}
+      <section id='about' className="py-20 px-6 md:px-20 text-center">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+          className="max-w-4xl mx-auto"
+        >
+          <p className="text-sm mb-2 text-gray-600">Hi, I'm</p>
+          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-black via-gray-900 to-gray-500 text-transparent bg-clip-text">
+            Abdalla Mustaf
+          </h2>
 
-<div className="mt-12 flex flex-wrap gap-3 justify-center">
-  <Link
-    href="#contact"
-    className="btn p-2 px-4 flex items-center gap-2 border border-gray-300 rounded-full text-gray-600 hover:bg-gray-100 dark:text-gray-300"
-  >
-    <Mail size={16} />
-    Contact Me
-  </Link>
+          <div className="flex justify-center mt-6">
+            <Image
+              src="/images/me.png"
+              alt="Abdalla Mustaf"
+              width={160}
+              height={160}
+              className="rounded-full"
+            />
+          </div>
 
-  <a
-    href="/images/resume.doc"
-    className="btn p-2 px-4 flex items-center gap-2 border border-gray-300 rounded-full text-gray-600 hover:bg-gray-100 dark:text-gray-300"
-    download
-  >
-    <Download size={16} />
-    Download CV
-  </a>
-</div>
-      </div>
+          <TypeAnimation
+            sequence={[
+              'MERN Stack Developer...',
+              2000,
+              'Frontend Specialist...',
+              2000,
+              'Backend Problem Solver...',
+              2000,
+              'UI/UX Enthusiast...',
+              2000,
+            ]}
+            wrapper="span"
+            speed={50}
+            repeat={Infinity}
+            className="block mt-6 text-lg md:text-xl font-medium text-gray-600"
+          />
 
-      <div id="experience" className="py-16">
-        <h2 className="text-3xl font-bold mb-8 flex items-center gap-2">
-          <span>💼</span> Work Experience
-        </h2>
-        <div className="border-l-2 border-yellow-400 pl-6 space-y-12">
-          <div className="relative flex flex-col md:flex-row gap-6 ml-4">
-            <div className="absolute left-[-0.8rem] top-2 w-4 h-4 bg-yellow-400 rounded-full border-2 border-white shadow ml-[-0.9rem]"></div>
-            <div className="md:w-1/2">
-              <h3 className="text-yellow-600 font-semibold">Trainer & Consultant</h3>
-              <p className="text-gray-500 dark:text-gray-400">Ministry of Energy and Water Resources</p>
-              <p className="text-sm text-gray-500 dark:text-gray-400">2020</p>
-            </div>
-            <div className="md:w-1/2">
-              <p className="text-gray-700 dark:text-gray-300">
-                Delivered nationwide public sector training in finance and accounting practices. Played a key role in capacity building for government staff in Somalia.
-              </p>
-            </div>
-          </div>
-          <div className="relative flex flex-col md:flex-row gap-6 ml-4">
-            <div className="absolute left-[-0.8rem] top-2 w-4 h-4 bg-yellow-400 rounded-full border-2 border-white shadow ml-[-0.9rem]"></div>
-            <div className="md:w-1/2">
-              <h3 className="text-yellow-600 font-semibold">Lecturer</h3>
-              <p className="text-gray-500 dark:text-gray-400">Horseed & Plasma University</p>
-              <p className="text-sm text-gray-500 dark:text-gray-400">2014 – Present</p>
-            </div>
-            <div className="md:w-1/2">
-              <p className="text-gray-700 dark:text-gray-300">
-                Teaching undergraduate and postgraduate students in accounting, auditing, and project finance. Mentoring future professionals and supporting academic excellence.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+<p className="text-gray-600 dark:text-gray-300 mt-6">
+  I'm a versatile Web and Mobile Developer with hands-on experience in both frontend and backend development. With a strong background in Computer Science, I also specialize in Network Engineering, Cybersecurity, and IoT systems. As a dedicated team leader and problem-solver, I’m passionate about building secure, scalable, and impactful digital solutions that connect technology with real-world needs.
+</p>
 
-      <div id="projects">
-        <h2 className="text-3xl font-bold mb-6">Projects</h2>
-        <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2">
-          <div className="border p-4 rounded-md">
-            <div className="relative w-full h-64 rounded overflow-hidden">
-              <Image src="/images/training.jpg" alt="Project 1" fill className="object-cover" />
-            </div>
-            <h3 className="mt-2 font-semibold">Financial Audit Toolkit</h3>
-            <p>Tool to streamline audit reporting using Excel and Power BI.</p>
-          </div>
-          <div className="border p-4 rounded-md">
-            <div className="relative w-full h-64 rounded overflow-hidden">
-              <Image src="/images/tool.jpg" alt="Project 2" fill className="object-cover" />
-            </div>
-            <h3 className="mt-2 font-semibold">Training Platform</h3>
-            <p>Portal to train 500+ gov/NGO staff in Somalia.</p>
-          </div>
-        </div>
-      </div>
 
-      <div id="about" className="py-16">
-        <h2 className="text-3xl font-bold mb-4">About me</h2>
-        <p className="mt-4 text-gray-700 dark:text-gray-300">
-          My journey in accounting began in the <span className="text-yellow-600">early 2000s</span> when I developed a strong interest in financial systems, auditing, and transparency. With a background in <span className="text-yellow-600">Business Administration and Finance</span>, I quickly established myself as a trusted expert in <span className="text-yellow-600">financial management</span>, compliance, and institutional capacity development across Somalia.
-        </p>
-        <p className="mt-4 text-gray-700 dark:text-gray-300">
-          Since <span className="text-yellow-600">2014</span>, I’ve had the privilege of lecturing at <span className="text-yellow-600">Horseed University</span> and <span className="text-yellow-600">Plasma University</span>, mentoring students in <span className="text-yellow-600">Accounting, Auditing, and Project Management</span>. I also led high-impact national training projects, including a successful engagement with the <span className="text-yellow-600">Ministry of Energy and Water Resources</span> in <span className="text-yellow-600">2020</span> to improve public financial accountability.
-        </p>
-        <p className="mt-4 text-gray-700 dark:text-gray-300">
-          My career highlights include developing professional training manuals, conducting over <span className="text-yellow-600">200+ workshops</span>, and mentoring dozens of financial officers now thriving in government and NGO roles. I’m driven by a belief in <span className="text-yellow-600">empowerment through education</span> and a commitment to building <span className="text-yellow-600">strong, transparent financial systems</span> that support development.
-        </p>
-      </div>
 
-      <div id="contact" className="py-16 px-4 dark:bg-gray-900">
-      <div className="max-w-3xl mx-auto ">
-        <h2 className="text-3xl font-bold mb-6 text-center">📬 Contact Me</h2>
-        <p className="text-gray-700 dark:text-gray-300 text-center mb-8 md:text-center">
-          Interested in working together or have any questions? I'd love to hear from you. Reach out anytime.
-        </p>
+          
+        </motion.div>
+      </section>
 
-        <div className="flex flex-col gap-6 items-start sm:items-center sm:flex-row sm:justify-around text-gray-700 dark:text-gray-300">
-          <div className="flex items-center gap-3">
-            <Mail className="text-yellow-500" size={20} />
-            <span>cartan3520@gmail.com </span>
+      {/* Skills Section */}
+      <section id='skills' className="py-20 px-6 bg-[#0f172a] text-white text-center">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+          className="max-w-4xl mx-auto"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold mb-10">My Skills</h2>
+          <div className="flex flex-wrap justify-center gap-4 text-sm md:text-base">
+            {[
+              'Full-Stack Development',
+              'React & React Native',
+              'Node.js & Express',
+              'Next.js',
+              'MongoDB & PostgreSQL',
+              'REST APIs & GraphQL',
+              'IoT Systems',
+              'Network Engineering',
+              'Cybersecurity',
+              'Linux & Server Management',
+              'Docker & CI/CD',
+              'Team Leadership',
+              'System Design',
+              'Agile & DevOps',
+              'Python',
+            ].map((skill, index) => (
+              <span
+                key={index}
+                className="bg-gray-700 hover:bg-gray-600 transition-all px-4 py-2 rounded-xl cursor-default"
+              >
+                {skill}
+              </span>
+            ))}
           </div>
-          <div className="flex items-center gap-3">
-            <Phone className="text-yellow-500" size={20} />
-            <span>+252-615514516</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <MapPin className="text-yellow-500" size={20} />
-            <span>Mogadishu, Somalia</span>
-          </div>
-        </div>
+        </motion.div>
+      </section>
 
-        <form className="mt-12 space-y-4 max-w-xl mx-auto text-left" action="https://formspree.io/f/movawkkq" method="POST">
-          <div>
-            <label htmlFor="name" className="block text-sm font-medium mb-1">Your Name</label>
-            <input type="text" id="name" className="w-full p-2 border rounded dark:text-black" required />
+      {/* Projects Section */}
+      <section id='project' className="px-6 py-20 bg-white text-black text-center">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+          className="max-w-6xl mx-auto"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold mb-10">🚀 Projects</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                title: 'Smart Glass IoT',
+                desc: 'An intelligent glass system powered by IoT for adaptive transparency, smart tinting, and environmental monitoring — all controlled via a cloud-based dashboard.',
+                tech: ['NodeMCU', 'MQTT', 'React'],
+                img: '/images/smartg.jpg',
+              },
+              
+              {
+                title: 'CyberToolkit',
+                desc: 'Suite of penetration testing tools for local networks with real-time threat alerts.',
+                tech: ['Python', 'Wireshark', 'Linux'],
+                img: '/images/close-up-image-programer-working-his-desk-office.jpg',
+              },
+              {
+                title: 'DevOps Dash',
+                desc: 'A developer dashboard for monitoring deployments, builds, and logs.',
+                tech: ['Docker', 'Next.js', 'GraphQL'],
+                img: '/images/devO.png',
+              },
+              {
+                title: 'MobiMart',
+                desc: 'Cross-platform mobile eCommerce app with real-time chat and order tracking.',
+                tech: ['React Native', 'Supabase', 'Stripe'],
+                img: '/images/mobilee.png',
+              },
+              {
+                title: 'NetAnalyzer',
+                desc: 'Network analysis tool that scans, maps, and monitors local and cloud systems.',
+                tech: ['Nmap', 'Node.js', 'GraphQL'],
+                img: '/images/neta.png',
+              },
+              {
+                title: 'TeamLeadBoard',
+                desc: 'A task and communication board built for team leaders managing remote teams.',
+                tech: ['Vue.js', 'Firebase', 'Agile'],
+                img: '/images/notes-cork.jpg',
+              },
+            ].map((project, index) => (
+              <motion.div
+                key={index}
+                className="border p-4 rounded-xl shadow-md hover:shadow-lg transition"
+                variants={fadeIn}
+                whileHover={{ scale: 1.03 }}
+              >
+                <img src={project.img} alt={project.title} className="rounded mb-4 w-full h-48 object-cover" />
+                <h3 className="font-semibold text-lg">{project.title}</h3>
+                <p className="text-sm mt-2">{project.desc}</p>
+                <div className="flex flex-wrap justify-center gap-2 mt-3 text-sm text-gray-600">
+                  {project.tech.map((tech, i) => (
+                    <span key={i}>{tech}</span>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
           </div>
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium mb-1">Your Email</label>
-            <input type="email" id="email" className="w-full p-2 border rounded dark:text-black" required />
-          </div>
-          <div>
-            <label htmlFor="message" className="block text-sm font-medium mb-1">Your Message</label>
-            <textarea id="message" rows={5} className="w-full p-2 border rounded dark:text-black" required></textarea>
-          </div>
-          <button type="submit" className="mt-4 flex items-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-4 py-2 rounded">
-            <Send size={16} /> Send Message
-          </button>
-        </form>
-      </div>
-    </div>
-    </section>
+        </motion.div>
+      </section>
 
+            {/* Contact Section */}
     
+
+    <section id='contact' className="px-6 py-24 bg-[#0f172a]  dark:bg-gray-900 text-center">
+  <motion.div
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+    variants={fadeIn}
+    className="max-w-xl mx-auto"
+  >
+    <h2 className="text-4xl font-extrabold mb-4 text-white dark:text-white">
+      Get in Touch
+    </h2>
+    <p className="text-lg text-white dark:text-gray-400 mb-8">
+      I'm open to freelance, full-time roles, or collaborative side projects.
+      Let's build something great together.
+    </p>
+
+    <div className="mb-8">
+      <a
+        href="mailto:your.email@example.com"
+        className="text-lg font-medium text-white hover:text-gray-800 dark:hover:text-violet-400 transition"
+      >
+        abuud@gmail.com
+      </a>
+    </div>
+
+    <div className="flex justify-center gap-4 text-2xl">
+      <a
+        href="https://github.com/yourusername"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub"
+        className="text-white dark:text-gray-400 hover:text-black dark:hover:text-white transition"
+      >
+        <i className="fab fa-github" />
+      </a>
+      <a
+        href="https://linkedin.com/in/yourusername"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+        className="text-white dark:text-gray-400 hover:text-blue-700 transition"
+      >
+        <i className="fab fa-linkedin" />
+      </a>
+      <a
+        href="https://twitter.com/yourusername"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Twitter"
+        className="text-white dark:text-gray-400 hover:text-sky-500 transition"
+      >
+        <i className="fab fa-twitter" />
+      </a>
+      <a
+        href="https://facebook.com/yourusername"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook"
+        className="text-white dark:text-gray-400 hover:text-blue-600 transition"
+      >
+        <i className="fab fa-facebook" />
+      </a>
+      <a
+        href="https://instagram.com/yourusername"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram"
+        className="text-white dark:text-gray-400 hover:text-pink-500 transition"
+      >
+        <i className="fab fa-instagram" />
+      </a>
+    </div>
+  </motion.div>
+</section>
+
+    </main>
   );
 }
-
