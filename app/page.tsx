@@ -35,14 +35,17 @@ export default function Home() {
           </h2>
 
           <div className="flex justify-center mt-6">
-            <Image
-              src="/images/apdalle.jpg"
-              alt="Abdalla Mustaf"
-              width={160}
-              height={100}
-              className="rounded-full"
-            />
-          </div>
+  <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 relative rounded-full overflow-hidden border-4 border-white shadow-lg">
+    <Image
+  src="/images/apdalle.jpg"
+  alt="Abdalla Mustaf"
+  fill
+  className="object-cover object-top"
+  priority
+/>
+  </div>
+</div>
+
 
           <TypeAnimation
             sequence={[
@@ -131,10 +134,10 @@ export default function Home() {
               },
               
               {
-                title: 'CyberToolkit',
-                desc: 'Suite of penetration testing tools for local networks with real-time threat alerts.',
-                tech: ['Python', 'Wireshark', 'Linux'],
-                img: '/images/close-up-image-programer-working-his-desk-office.jpg',
+                title: 'Food Delivery App',
+                desc: 'A mobile app for ordering food from local restaurants with real-time tracking and notifications.',
+                tech: ['Flutter', 'Firebase', 'Dart'],
+                img: '/images/Food.webp',
               },
               {
                 title: 'DevOps Dash',
