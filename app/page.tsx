@@ -36,17 +36,17 @@ export default function Home() {
 
           <div className="flex justify-center mt-6">
             <Image
-              src="/images/me.png"
+              src="/images/apdalle.jpg"
               alt="Abdalla Mustaf"
               width={160}
-              height={160}
+              height={100}
               className="rounded-full"
             />
           </div>
 
           <TypeAnimation
             sequence={[
-              'MERN Stack Developer...',
+              'Mobile App Developer...',
               2000,
               'Frontend Specialist...',
               2000,
@@ -204,13 +204,13 @@ export default function Home() {
         href="mailto:your.email@example.com"
         className="text-lg font-medium text-white hover:text-gray-800 dark:hover:text-violet-400 transition"
       >
-        abuud@gmail.com
+        cabdullaahimm@st.snu.edu.so
       </a>
     </div>
 
     <div className="flex justify-center gap-4 text-2xl">
       <a
-        href="https://github.com/yourusername"
+        href="https://github.com/Apdalle-Mustaph"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="GitHub"
@@ -219,7 +219,7 @@ export default function Home() {
         <i className="fab fa-github" />
       </a>
       <a
-        href="https://linkedin.com/in/yourusername"
+        href="https://www.linkedin.com/in/apdalle-mustaph-b73a60370/"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="LinkedIn"
@@ -228,7 +228,7 @@ export default function Home() {
         <i className="fab fa-linkedin" />
       </a>
       <a
-        href="https://twitter.com/yourusername"
+        href="https://twitter.com/ApdalleMustaph"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Twitter"
