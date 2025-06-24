@@ -62,7 +62,7 @@ export default function Home() {
           />
 
 <p className="text-gray-600 dark:text-gray-300 mt-6">
-  I'm a versatile Web and Mobile Developer with hands-on experience in both frontend and backend development. With a strong background in Computer Science, I also specialize in Network Engineering, Cybersecurity, and IoT systems. As a dedicated team leader and problem-solver, I’m passionate about building secure, scalable, and impactful digital solutions that connect technology with real-world needs.
+  I'm a versatile Web and Mobile App Developer with hands-on experience in both frontend and backend development. With a strong background in Computer Science, I also specialize in Network Engineering, Cybersecurity, and IoT systems. As a dedicated team leader and problem-solver, I’m passionate about building secure, scalable, and impactful digital solutions that connect technology with real-world needs.
 </p>
 
 
