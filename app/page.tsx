@@ -92,6 +92,7 @@ export default function Home() {
               'IoT Systems',
               'Network Engineering',
               'Cybersecurity',
+              'Ethical Hacking',
               'Linux & Server Management',
               'Docker & CI/CD',
               'Team Leadership',
